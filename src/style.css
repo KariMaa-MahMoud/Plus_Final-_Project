@@ -10,6 +10,10 @@ body {
 
 a {
   color: white;
+  transition: all 200ms ease;
+}
+a:hover {
+  color: #3394c8;
 }
 
 .weather-app {
@@ -45,6 +49,12 @@ header {
   margin-left: 5px;
   border-radius: 6px;
   color: white;
+  transition: all 200ms ease;
+}
+
+.search-form-button:hover {
+  cursor: pointer;
+  background: #c7966c;
 }
 
 main {
@@ -55,7 +65,25 @@ main {
   display: flex;
   justify-content: space-between;
 }
-
+.time {
+  display: block;
+  margin: 0;
+  font-size: 25px;
+  line-height: 48px;
+  color: white;
+  margin-left: 220px;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+.forcast-title {
+  display: block;
+  margin: 0;
+  font-size: 38px;
+  line-height: 48px;
+  color: white;
+  margin-left: 150px;
+  margin-bottom: 20px;
+}
 .weather-app-city {
   display: block;
   margin: 0;
@@ -86,6 +114,7 @@ main {
 
 .weather-app-temperature-container {
   display: flex;
+  margin-top: 25px;
 }
 
 .weather-app-icon {
@@ -94,8 +123,8 @@ main {
 }
 
 .weather-app-temperature {
-  font-size: 88px;
-  line-height: 88px;
+  font-size: 70px;
+  line-height: 70px;
   font-weight: bold;
   color: white;
 }
