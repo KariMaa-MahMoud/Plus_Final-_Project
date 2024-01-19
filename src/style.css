@@ -1,6 +1,8 @@
 body {
   background-color: #f9f7fe;
-  font-family: "Roboto", sans-serif;
+  font-family: "Fasthand", cursive;
+  font-family: "Grape Nuts", cursive;
+  font-family: "Nova Square", sans-serif;
   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/111/197/original/tom-barrett-hgGplX3PFBg-unsplash.jpg?1705663413");
   background-size: cover;
   background-repeat: no-repeat;
@@ -21,14 +23,16 @@ a {
 
 header {
   border-bottom: 1px;
-  padding: 0 0 30px 0;
+  padding: 0 0 20px 0;
+  font-family: "Fasthand", cursive;
+  font-family: "Grape Nuts", cursive;
 }
 
 .search-form-input {
   background-color: #f9f7fe;
   border: none;
   border-radius: 6px;
-  width: 75%;
+  width: 78%;
   font-size: 16px;
   padding: 15px 20px;
 }
@@ -53,17 +57,27 @@ main {
 }
 
 .weather-app-city {
+  display: block;
   margin: 0;
   font-size: 38px;
   line-height: 48px;
   color: white;
+  margin-left: 240px;
+  margin-bottom: 20px;
+  margin-top: 0;
 }
-
+.weather-forecast-temperatures {
+  text-align: center;
+  color: #3394c8;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
 .weather-app-details {
   font-size: 16px;
   color: white;
   line-height: 24px;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 .weather-app-details strong {
@@ -104,6 +118,7 @@ main {
   font-size: 16px;
   line-height: 20px;
   margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .weather-forecast-icon {
@@ -111,13 +126,6 @@ main {
   height: 88px;
   display: block;
   margin: 0 auto;
-}
-.weather-forecast-temperatures {
-  text-align: center;
-  color: #3394c8;
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
 }
 
 .weather-forecast-temperature {
@@ -128,7 +136,7 @@ footer {
   border-top: 1px #f9f7fe;
   padding: 30px 0 0 0;
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
   color: #b55f13;
 }
