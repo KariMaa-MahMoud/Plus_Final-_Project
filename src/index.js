@@ -37,8 +37,11 @@ function formatDate(date) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-
-  return `${day} ${hours}:${minutes}`;
+  if (hours > 12) {
+    return `${day}, ${hours}:${minutes} pm`;
+  } else {
+    return `${day}, ${hours}:${minutes} am`;
+  }
 }
 
 function searchCity(city) {
@@ -81,11 +84,11 @@ function displayForecast(response) {
         <img src="${day.condition.icon_url}" class="weather-forecast-icon" />
         <div class="weather-forecast-temperatures">
           <div class="weather-forecast-temperature">
-            <strong>${Math.round(day.temperature.maximum)}º</strong>
+            <strong>${Math.round(day.temperature.maximum)}°</strong>
           </div>
           <div class="weather-forecast-temperature">${Math.round(
             day.temperature.minimum
-          )}º</div>
+          )}°</div>
         </div>
       </div>
     `;
