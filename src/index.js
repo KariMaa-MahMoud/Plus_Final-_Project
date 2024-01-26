@@ -38,7 +38,7 @@ function formatDate(date) {
     minutes = `0${minutes}`;
   }
   if (hours > 12) {
-    return `${day}, ${hours}:${minutes} pm`;
+    return `${day}, 0${hours - 12}:${minutes} pm`;
   } else {
     return `${day}, ${hours}:${minutes} am`;
   }
@@ -84,11 +84,11 @@ function displayForecast(response) {
         <img src="${day.condition.icon_url}" class="weather-forecast-icon" />
         <div class="weather-forecast-temperatures">
           <div class="weather-forecast-temperature">
-            <strong>${Math.round(day.temperature.maximum)}°</strong>
+            <strong>${Math.round(day.temperature.maximum)}&deg;</strong>
           </div>
           <div class="weather-forecast-temperature">${Math.round(
             day.temperature.minimum
-          )}°</div>
+          )}&deg;</div>
         </div>
       </div>
     `;

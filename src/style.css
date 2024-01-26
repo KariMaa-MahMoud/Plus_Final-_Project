@@ -118,19 +118,20 @@ main {
 }
 
 .weather-app-icon {
-  width: 88px;
-  height: 88px;
+  width: 108px;
+  height: 108px;
 }
 
 .weather-app-temperature {
-  font-size: 70px;
+  font-size: 85px;
   line-height: 70px;
   font-weight: bold;
   color: white;
 }
 
 .weather-app-unit {
-  margin-top: 6px;
+  margin-top: 0px;
+  margin-bottom: 10px;
   font-size: 28px;
   color: white;
 }
