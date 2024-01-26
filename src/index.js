@@ -2,7 +2,6 @@ function refreshWeather(response) {
   let temperatureElement = document.querySelector("#temperature");
   let temperature = response.data.temperature.current;
   let cityElement = document.querySelector("#city");
-  let countryElement = document.querySelector("#country");
 
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
@@ -13,9 +12,13 @@ function refreshWeather(response) {
   let countryName = response.data.country;
   if (countryName === "United States of America") {
     countryName = "USA";
+  } else if (
+    countryName === "United Kingdom of Great Britain and Northern Ireland"
+  ) {
+    countryName = "UK";
   }
 
-  cityElement.innerHTML = `${response.data.city}, ${response.data.country}`;
+  cityElement.innerHTML = `${response.data.city}, ${countryName}`;
   timeElement.innerHTML = formatDate(date);
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
