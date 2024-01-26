@@ -2,14 +2,20 @@ function refreshWeather(response) {
   let temperatureElement = document.querySelector("#temperature");
   let temperature = response.data.temperature.current;
   let cityElement = document.querySelector("#city");
+  let countryElement = document.querySelector("#country");
+
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windSpeedElement = document.querySelector("#wind-speed");
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
   let iconElement = document.querySelector("#icon");
+  let countryName = response.data.country;
+  if (countryName === "United States of America") {
+    countryName = "USA";
+  }
 
-  cityElement.innerHTML = response.data.city;
+  cityElement.innerHTML = `${response.data.city}, ${response.data.country}`;
   timeElement.innerHTML = formatDate(date);
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
@@ -21,6 +27,7 @@ function refreshWeather(response) {
 }
 
 function formatDate(date) {
+  let currentDate = new Date();
   let minutes = date.getMinutes();
   let hours = date.getHours();
   let days = [
@@ -32,15 +39,29 @@ function formatDate(date) {
     "Friday",
     "Saturday",
   ];
-  let day = days[date.getDay()];
+
+  let dayWord = days[date.getDay()];
+  let day = currentDate.getDate();
+  if (day < 10) {
+    day = `0${day}`;
+  }
+
+  let month = currentDate.getMonth() + 1; // Months are zero indexed, so we add 1
+  if (month < 10) {
+    month = `0${month}`;
+  }
+  let year = currentDate.getFullYear();
+
+  // Format the date as DD/MM/YYYY
+  let formattedDate = day + "/" + month + "/" + year;
 
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
   if (hours > 12) {
-    return `${day}, 0${hours - 12}:${minutes} pm`;
+    return `${dayWord}, ${formattedDate}, 0${hours - 12}:${minutes} pm`;
   } else {
-    return `${day}, ${hours}:${minutes} am`;
+    return `${formattedDate}, ${hours}:${minutes} am`;
   }
 }
 
@@ -102,4 +123,4 @@ function displayForecast(response) {
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
-searchCity("Egypt");
+searchCity("Cairo, Egypt");
