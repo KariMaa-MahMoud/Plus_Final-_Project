@@ -1,5 +1,3 @@
-// Add this code to your existing JavaScript file
-
 // Function to get weather based on current location
 function getCurrentLocationWeather() {
   if (navigator.geolocation) {
