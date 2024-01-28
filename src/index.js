@@ -62,7 +62,7 @@ function formatDate(date) {
     minutes = `0${minutes}`;
   }
   if (hours > 12) {
-    return `${dayWord}, ${formattedDate}, 0${hours - 12}:${minutes} pm`;
+    return `${dayWord}, ${formattedDate}, ${hours - 12}:${minutes} pm`;
   } else {
     return `${formattedDate}, ${hours}:${minutes} am`;
   }
