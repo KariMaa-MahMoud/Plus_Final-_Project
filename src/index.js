@@ -1,8 +1,37 @@
+// Add this code to your existing JavaScript file
+
+// Function to get weather based on current location
+function getCurrentLocationWeather() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition((position) => {
+      const latitude = position.coords.latitude;
+      const longitude = position.coords.longitude;
+      const apiKey = "b2a5adcct04b33178913oc335f405433";
+      const apiUrl = `https://api.shecodes.io/weather/v1/current?lat=${latitude}&lon=${longitude}&key=${apiKey}&units=metric`;
+
+      axios.get(apiUrl).then(refreshWeather);
+    }, handleError);
+  } else {
+    alert("Geolocation is not supported by your browser.");
+  }
+}
+
+// Function to handle errors in geolocation
+function handleError(error) {
+  console.error("Error getting geolocation:", error);
+  // You can provide a user-friendly message to the user if there's an error
+  alert("Error getting your current location. Please try again later.");
+}
+
+// Add a click event listener to the current location icon
+
+const currentLocationIcon = document.getElementById("current-location-icon");
+currentLocationIcon.addEventListener("click", getCurrentLocationWeather);
+
 function refreshWeather(response) {
   let temperatureElement = document.querySelector("#temperature");
   let temperature = response.data.temperature.current;
   let cityElement = document.querySelector("#city");
-
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windSpeedElement = document.querySelector("#wind-speed");
