@@ -17,7 +17,7 @@ function getCurrentLocationWeather() {
 // Function to handle errors in geolocation
 function handleError(error) {
   console.error("Error getting geolocation:", error);
-  // You can provide a user-friendly message to the user if there's an error
+
   alert("Error getting your current location. Please try again later.");
 }
 
