@@ -13,7 +13,7 @@ a {
   transition: all 200ms ease;
 }
 a:hover {
-  color: #cab281;
+  color: rgb(128, 0, 0, 0.5);
 }
 
 .weather-app {
@@ -26,10 +26,11 @@ a:hover {
 }
 
 .current-location-icon {
-  font-size: 44px;
-  color: #57508c;
+  font-size: 55px;
+  color: #4d467f;
   cursor: pointer;
   transition: all 200ms ease;
+  margin-top: 5px;
 }
 
 .current-location-icon:hover {
@@ -57,7 +58,6 @@ header {
 }
 
 .search-form-button {
-  background: #57508c;
   padding: 15px 30px;
   border: none;
   font-size: 16px;
@@ -139,7 +139,7 @@ main {
 }
 
 .weather-app-details strong {
-  color: #57508c;
+  color: #4d467f;
   font-weight: bolder;
 }
 
@@ -175,7 +175,7 @@ main {
 
 .weather-forecast-date {
   text-align: center;
-  color: #57508c;
+  color: #4d467f;
   font-size: 16px;
   line-height: 20px;
   margin-bottom: 10px;
@@ -199,22 +199,25 @@ footer {
   text-align: center;
   font-size: 12px;
   font-weight: bold;
-  color: #57508c;
+  color: #4d467f;
 }
 
 /* Common styles for all screen sizes */
 
 /* Styles for screens smaller than 600px */
 @media (max-width: 600px) {
-  /* Adjust styles for smaller screens */
+  /* Adjust styles for smaller screens 
+  to be updated */
 }
 
 /* Styles for screens between 601px and 1024px */
 @media (min-width: 601px) and (max-width: 1024px) {
-  /* Adjust styles for medium-sized screens */
+  /* Adjust styles for medium-sized screens
+  to be updated  */
 }
 
 /* Styles for screens larger than 1024px */
 @media (min-width: 1025px) {
-  /* Adjust styles for larger screens */
+  /* Adjust styles for larger screens 
+  to be updated */
 }
