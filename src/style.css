@@ -203,30 +203,33 @@ footer {
 }
 
 /* Media query for screens smaller than 600px (adjust as needed) */
-@media (max-width: 400px) {
+@media (max-width: 100px) {
   .weather-app {
-    padding: 20px; /* Adjust padding for smaller screens */
+    padding: 20px;
   }
 
   .search-form-input {
-    width: 70%; /* Make search input full width on smaller screens */
+    width: 60%;
+  }
+  .search-form-button {
+    width: 60%;
   }
 
   .weather-app-city {
-    font-size: 24px; /* Decrease font size for smaller screens */
-    margin-left: 10px; /* Adjust margin as needed for spacing */
+    font-size: 24px;
+    margin-left: 10px;
   }
 
   .current-location-icon {
-    font-size: 30px; /* Decrease icon size for smaller screens */
+    font-size: 30px;
   }
 
   .weather-forecast-date {
-    font-size: 10px; /* Decrease font size for smaller screens in forecast */
+    font-size: 10px;
   }
 
   .weather-forecast-icon {
-    width: 40px; /* Decrease icon size for smaller screens in forecast */
+    width: 40px;
     height: 40px;
   }
 }
