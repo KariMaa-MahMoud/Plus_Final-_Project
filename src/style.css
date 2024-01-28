@@ -30,6 +30,7 @@ header {
   padding: 0 0 20px 0;
   font-family: "Fasthand", cursive;
   font-family: "Grape Nuts", cursive;
+  font-family: "Nova Square", sans-serif;
 }
 
 .search-form-input {
@@ -39,6 +40,9 @@ header {
   width: 78%;
   font-size: 16px;
   padding: 15px 20px;
+  font-family: "Fasthand", cursive;
+  font-family: "Grape Nuts", cursive;
+  font-family: "Nova Square", sans-serif;
 }
 
 .search-form-button {
@@ -51,6 +55,9 @@ header {
   color: white;
   background: #4d467f;
   transition: all 200ms ease;
+  font-family: "Fasthand", cursive;
+  font-family: "Grape Nuts", cursive;
+  font-family: "Nova Square", sans-serif;
 }
 
 .search-form-button:hover {
