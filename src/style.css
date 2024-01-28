@@ -201,3 +201,32 @@ footer {
   font-weight: bold;
   color: #57508c;
 }
+
+/* Media query for screens smaller than 600px (adjust as needed) */
+@media (max-width: 600px) {
+  .weather-app {
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .search-form-input {
+    width: 100%; /* Make search input full width on smaller screens */
+  }
+
+  .weather-app-city {
+    font-size: 24px; /* Decrease font size for smaller screens */
+    margin-left: 10px; /* Adjust margin as needed for spacing */
+  }
+
+  .current-location-icon {
+    font-size: 20px; /* Decrease icon size for smaller screens */
+  }
+
+  .weather-forecast-date {
+    font-size: 14px; /* Decrease font size for smaller screens in forecast */
+  }
+
+  .weather-forecast-icon {
+    width: 50px; /* Decrease icon size for smaller screens in forecast */
+    height: 50px;
+  }
+}
